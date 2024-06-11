@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <app-header></app-header>
+        <caption>მატარებლების ჩამონათვალი</caption>
+        
+        <div class="train-schedule" *ngIf="departureData && departureData.length > 0; else noDataTemplate">
+            <table>
+            <thead>
+                <tr>
+                  <th>მატარებლის სახელი</th>
+                  <th>გამგზავრება</th>
+                  <th>ჩასვლა</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let departure of departureData">
+                  <td>#{{ departure.trains[0].number }} {{ departure.trains[0].name }}</td>
+                  <td>{{ departure.trains[0].departure }} {{ departure.source }}</td>
+                  <td>{{ departure.trains[0].arrive }} {{ departure.destination }}</td>
+                  
+                  <td>
+                    <button (click)="bookTrain(departure)">დაჯავშნა</button>
+                  </td>
+                </tr>
+                <tr *ngFor="let departure of departureData">
+                    <td>#{{ departure.trains[1].number }} {{ departure.trains[1].name }}</td>
+                    <td>{{ departure.trains[1].departure }} {{ departure.source }}</td>
+                    <td>{{ departure.trains[1].arrive }} {{ departure.destination }}</td>
+                    
+                    <td>
+                      <button (click)="bookTrain(departure)">დაჯავშნა</button>
+                    </td>
+                  </tr>
+                  <tr *ngFor="let departure of departureData">
+                    <td>#{{ departure.trains[2].number }} {{ departure.trains[2].name }}</td>
+                    <td>{{ departure.trains[2].departure }} {{ departure.source }}</td>
+                    <td>{{ departure.trains[2].arrive }} {{ departure.destination }}</td>
+                    
+                    <td>
+                      <button (click)="bookTrain(departure)">დაჯავშნა</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+    
+        <ng-template #noDataTemplate>
+            <div class="no-data">
+                <h1>აღნიშნული რეისი არ მოიძებნა!</h1>
+              </div>
+          </ng-template>
+    <app-footer></app-footer>
+</div>

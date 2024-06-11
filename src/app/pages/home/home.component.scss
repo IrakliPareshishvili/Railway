@@ -1,0 +1,48 @@
+.home-page-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 150px;
+    background: url(https://images.unsplash.com/photo-1555124618-81b95d0e5892?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    position: relative;    
+    .welcome-section{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 90px 0px;
+        .welcome-section-body {
+            width: 100%;
+            height: auto;
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h2{
+                color: #fff;
+                font-size: 30px;
+                font-weight: 300;
+                text-shadow: 0px 0px 5px #000;
+                letter-spacing: 0.5px;
+            }
+            p{
+                color: #fff;
+                font-size: 24px;
+                font-weight: 100;
+                text-shadow: 0px 0px 4px #000;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+    .section-reservation{
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        border: 1px solid #cacaca;
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px #cacaca;
+    }
+}

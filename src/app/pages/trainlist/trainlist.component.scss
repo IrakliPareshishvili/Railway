@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+.train-schedule{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+
+caption {
+  caption-side: top;
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+
+thead tr {
+  background-color: #f2f2f2;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+
+tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: red;
+  background-color: #f9f9f9;
+}
+
+.no-data h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+  app-footer {
+
+    background-color: #f9ffff;
+    text-align: center; 
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
