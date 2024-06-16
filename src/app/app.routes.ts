@@ -11,7 +11,7 @@ export const routes: Routes = [
     
     { path: '', component: LayoutComponent },
     { path: 'trainlist', component: TrainlistComponent},
-    { path: 'passengerdetailes', component: PassengerdetailsComponent},
+    { path: 'passengerdetails', component: PassengerdetailsComponent},
     { path: "", redirectTo: "layout", pathMatch: "full" },
     { path: "**", component: PageNotFoundComponent },
     

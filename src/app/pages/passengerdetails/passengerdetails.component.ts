@@ -13,4 +13,6 @@ import { TrainlistComponent } from '../trainlist/trainlist.component';
 })
 export class PassengerdetailsComponent {
 
+  
+
 }

@@ -10,7 +10,8 @@ export class GetDeparturesService {
   private apiUrl = 'https://railway.stepprojects.ge/api/';
 
   constructor(private http :HttpClient) { }
-
+  departureData: any;
+  trainData: any;
 
   getDepartures(from : string, to : string, date : string) : Observable<any> {
     const url = `${this.apiUrl}getdeparture`;

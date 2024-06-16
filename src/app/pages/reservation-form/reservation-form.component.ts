@@ -22,9 +22,6 @@ export class ReservationFormComponent {
     date : "",
   }
 
-  departuredata : any;
-  
-
   constructor(private router: Router, private getDepartureService: GetDeparturesService) {}
   ngOninit() :void {
 
@@ -33,13 +30,9 @@ export class ReservationFormComponent {
   getDepartures(): void {
     this.getDepartureService.getDepartures(this.trainsData.from, this.trainsData.to, this.trainsData.date)
       .subscribe(data => {
-        this.departuredata = data;
-        const navigationExtras: NavigationExtras = {
-          state: {
-            departureData: this.departuredata
-          }
-        };
-        this.router.navigate(['trainlist'], navigationExtras);
+        localStorage.setItem('departureData', JSON.stringify(data))
+        this.getDepartureService.departureData = data;
+        this.router.navigate(['trainlist']);
       });
   }
 
