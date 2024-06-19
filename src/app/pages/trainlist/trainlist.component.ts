@@ -30,11 +30,10 @@ export class TrainlistComponent implements OnInit {
         this.departureData = JSON.parse(localStorage.getItem('departureData')!)
       } 
     }
-    console.log(this.departureData)
   }
 
   bookTrain(train: any): void {
-    this.router.navigate(['/passengerdetails']);
+    this.router.navigate(['/passengerdetails'], { state: { train } });
   }
  
   

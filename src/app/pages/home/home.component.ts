@@ -28,7 +28,6 @@ export class HomeComponent {
 
   getStations() : void {
     this.stationService.getStations().subscribe(stations => this.stations = stations);
-    console.log(this.stations)
   }
 
   getTrains() : void {

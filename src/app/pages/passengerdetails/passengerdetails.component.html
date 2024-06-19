@@ -1,1 +1,47 @@
-<p>passengerdetails works!</p>
+
+    <app-header></app-header>
+
+    <div class="container">
+        <h2>მგზავრების მონაცემები</h2>
+      
+        
+        <div class="section">
+          <h3>მატარებლის განრიგი</h3>
+          <div class="train-details">
+            <div>
+              <p><strong>რეისის ნომერი:</strong> {{ train.number }}</p>
+              <p><strong>რეისის დასახელება:</strong> {{ train.name }}</p>
+              <p><strong>გამგზავრება:</strong> {{ train.departure }}</p>
+              <p><strong>ჩასვლა:</strong> {{ train.arrive }}</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="section">
+          <h3>საკონტაქტო ინფორმაცია</h3>
+          <div class="contact-info">
+            <form>
+              <label for="email">იმეილი:</label>
+              <input type="email" id="email" name="email" required>
+      
+              <label for="phone">ტელეფონის ნომერი:</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </form>
+          </div>
+        </div>
+      
+        <div class="section">
+          <h3>Invoice</h3>
+          <div class="invoice-details">
+            <p><strong>ფასი:</strong> </p>
+            <p><strong>სულ:</strong> </p>
+          </div>
+        </div>
+      
+        <button class="register-button" (click)="navigateToPayment()">ბილეთების რეგისტრაცია</button>
+      
+      </div>
+      
+      
+      
+    <app-footer></app-footer>
